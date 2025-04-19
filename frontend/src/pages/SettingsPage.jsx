@@ -20,14 +20,7 @@ const SettingsPage = () => {
 
 				<div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
 					{THEMES.map((t) => (
-						<button
-							key={t}
-							className={`
-                group flex flex-col items-center gap-1.5 p-2 rounded-lg transition-colors cursor-pointer
-                ${theme === t ? "bg-base-200" : "hover:bg-base-200/50"}
-              `}
-							onClick={() => setTheme(t)}
-						>
+						<button key={t} className={`group flex flex-col items-center gap-1.5 p-2 rounded-lg cursor-pointer transition-colors ${theme === t ? "bg-base-200" : "hover:bg-base-200/50"}`} onClick={() => setTheme(t)}>
 							<div className="relative h-8 w-full rounded-md overflow-hidden" data-theme={t}>
 								<div className="absolute inset-0 grid grid-cols-4 gap-px p-1">
 									<div className="rounded bg-primary"></div>
